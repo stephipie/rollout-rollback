@@ -59,27 +59,27 @@ K8s deaktivieren.
 ## Deployment-Beweise
 
 ### Version 1.0.0 (Initial)
-[Hier Screenshot von Version 1.0.0 einfügen](/screenshots/Version1.0.0.png)
+![Screenshot von Version 1.0.0](/screenshots/Version1.0.0.png)
 
 ### Version 2.0.0 (Nach Rolling Update)
-[Hier Screenshot von Version 2.0.0 einfügen](/screenshots/Version2.0.0.png)
-[Hier Screenshot vom Rollout](/screenshots/rolledOut.png)
+![Screenshot von Version 2.0.0](/screenshots/Version2.0.0.png)
+![Screenshot vom Rollout](/screenshots/rolledOut.png)
 
 ### Version 1.0.0 (Nach Rollback)
-[Hier Screenshot vom Rollback einfügen](/screenshots/rolledBack.png)
-[Hier Screenshot von Version 1.0.0 nach Rollback einfügen](/screenshots/Version1.0.0nachRollback.png)
+![Screenshot vom Rollback](/screenshots/rolledBack.png)
+![Screenshot von Version 1.0.0 nach Rollback](/screenshots/Version1.0.0nachRollback.png)
 
 ### Kubernetes Ressourcen Status
 ```bash
 kubectl get deployment,service,pods -l app=my-nginx
 ```
-[Hier Output einfügen](/screenshots/RessourcenStatus.png)
+![Output](/screenshots/RessourcenStatus.png)
 
 ### Kuberntes Ressourcen Status nach dem Clean-Up
 ```bash
 kubectl get deployment,service,pods -l app=my-nginx
 ```
-[Hier Output einfügen](/screenshots/StatusCleanup.png)
+![Output nach Clean-Up](/screenshots/StatusCleanup.png)
 
 
 ## Reflexion (Kurzfassung)
