@@ -82,7 +82,7 @@ kubectl get deployment,service,pods -l app=my-nginx
 ![Output nach Clean-Up](/screenshots/StatusCleanup.png)
 
 
-## Reflexion (Kurzfassung)
+## Reflexion
 
 ### 🔬 Warum ist ein Deployment in Kubernetes nicht einfach nur eine etwas andere Version von docker run mit --restart=always?
 Ein Deployment ist ein intelligenter Controller, der den gewünschten Zustand überwacht, Updates und Rollbacks steuert und Skalierung ermöglicht. Es ist viel mehr als ein simpler Neustart-Mechanismus – es ist ein Orchestrator für ganze Anwendungen.
@@ -91,7 +91,7 @@ Ein Deployment ist ein intelligenter Controller, der den gewünschten Zustand ü
 Nein, das ist keine Magie! Das Deployment merkt sofort, wenn ein Pod fehlt, und startet automatisch einen neuen. Es sorgt immer dafür, dass die gewünschte Anzahl an Pods läuft – wie ein Gärtner, der fehlende Pflanzen sofort ersetzt.
 
 ### 🎬 Was passiert beim Rolling Update? Wie wird ein Ausfall verhindert?
-Action! Neue Pods werden schrittweise gestartet, während alte noch laufen. Erst wenn die neuen bereit sind, werden die alten beendet. So bleibt der Service immer erreichbar – kein kompletter Ausfall, sondern ein fließender Wechsel.
+Neue Pods werden schrittweise gestartet, während alte noch laufen. Erst wenn die neuen bereit sind, werden die alten beendet. So bleibt der Service immer erreichbar – kein kompletter Ausfall, sondern ein fließender Wechsel.
 
 ### 👽 Wie findet der Service immer den richtigen Pod (NodePort & Update)?
 Stell dir vor, jeder Pod sendet ein Label-Signal. Der Service sucht immer nach Pods mit dem passenden Label (z.B. `app: my-nginx`). Egal wie viele sich austauschen – der Service leitet den Traffic immer an die richtigen, aktuellen Pods weiter.
